@@ -96,3 +96,25 @@ $gutters: (
         }
     }
 }
+
+@mixin make-offsets($infix) {
+    @for $i from 0 to $grid-columns {
+        .offset#{$infix}-#{$i} {
+            margin-left: if($i > 0, math.div(100%, $grid-columns) * i, 0);
+        }
+    }
+}
+
+@mixin make-gutters($infix) {
+    @each $i, $ratio in $gutters {
+        .g#{$infix}-#{$i},
+        .gx#{$infix}-#{$i} {
+            --grid-gutter-x: #{$grid-gutter-width * $ratio};
+        }
+
+        .g#{$infix}-#{$i},
+        .gy#{$infix}-#{$i} {
+            --grid-gutter-y: #{$grid-gutter-width * $ratio};
+        }
+    }
+}
