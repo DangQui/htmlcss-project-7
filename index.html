@@ -77,8 +77,64 @@
             rel="stylesheet" />
 
         <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
 
         <!-- Animation CSS -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet" />
     </head>
-    <body></body>
+    <body style="height: 5000px">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="#!" class="header__logo">
+                        <img
+                            src="./assets/images/logo.svg"
+                            alt=""
+                            class="header__logo-img" />
+                    </a>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav-item">
+                                <a href="#!" class="nav__link">Episodes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav__link">Trending</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav__link">Category</a>
+                                <img
+                                    src="./assets/icons/arrow-down.svg"
+                                    alt="" />
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav__link">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__cta">
+                        <a href="#!" class="header__login">Log in</a>
+                        <button class="btn btn-dark header__sign-up">
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Animation JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 120,
+                delay: 0,
+                duration: 600,
+                easing: "ease",
+                once: true,
+                mirror: false,
+            });
+        </script>
+    </body>
 </html>

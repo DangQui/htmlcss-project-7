@@ -19,14 +19,14 @@
 }
 
 @mixin fontStyleContent($type: "normal") {
-    @if $type = "md" {
+    @if $type == "md" {
         @include fontStyles(
             var.$desc-size-md,
             var.$desc-weight,
             var.$desc-height-md,
             var.$desc-color
         );
-    } @else if $type = "sm" {
+    } @else if $type == "sm" {
         @include fontStyles(
             var.$desc-size-sm,
             var.$desc-weight,

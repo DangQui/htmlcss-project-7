@@ -21,6 +21,8 @@ a {
 a,
 button {
     color: inherit;
+    border: none;
+    outline: none;
 }
 
 input,
@@ -29,10 +31,4 @@ button,
 select {
     font-size: inherit;
     font-family: inherit;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

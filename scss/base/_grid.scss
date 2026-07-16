@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 
 $grid-breakpoints: (
     xs: 0,
@@ -91,7 +92,7 @@ $gutters: (
 
 @mixin make-columns($infix) {
     @for $i from 1 through $grid-columns {
-        .col-#{$infix}-#{$i} {
+        .col#{$infix}-#{$i} {
             width: math.div(100%, $grid-columns) * $i;
         }
     }
@@ -100,7 +101,7 @@ $gutters: (
 @mixin make-offsets($infix) {
     @for $i from 0 to $grid-columns {
         .offset#{$infix}-#{$i} {
-            margin-left: if($i > 0, math.div(100%, $grid-columns) * i, 0);
+            margin-left: if($i > 0, math.div(100%, $grid-columns) * $i, 0);
         }
     }
 }
@@ -116,5 +117,25 @@ $gutters: (
         .gy#{$infix}-#{$i} {
             --grid-gutter-y: #{$grid-gutter-width * $ratio};
         }
+    }
+}
+
+@each $breakpoint, $dimension in $grid-breakpoints {
+    $max-width: map.get($container-max-widths, $breakpoint);
+    $is-xs: $breakpoint == xs;
+    $infix: if($is-xs, "", "-#{$breakpoint}");
+
+    @include make-media-query($dimension, $is-xs) {
+        .container {
+            max-width: $max-width;
+        }
+
+        @include make-row-columns($infix);
+
+        @include make-columns($infix);
+
+        @include make-offsets($infix);
+
+        @include make-gutters($infix);
     }
 }

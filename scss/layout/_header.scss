@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.header {
+    position: sticky;
+    top: -22px;
+    background: var.$secondary-color;
+    padding: 42px 0 20px;
+    z-index: 990;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__cta {
+        display: flex;
+        align-items: center;
+    }
+
+    &__login {
+        margin-right: 28px;
+        @include mix.fontStyleContent(md);
+        color: var.$heading-color;
+        font-weight: var.$button-weight;
+    }
+
+    &__sign-up {
+        --btn-height: 48px;
+        min-width: 116px;
+        border-radius: 6px;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}

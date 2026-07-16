@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.btn {
+    --btn-height: 64px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 158px;
+    height: var(--btn-height);
+    padding: 18px 0px;
+    border-radius: 8px;
+    background: var.$primary-color;
+    transition: opacity 0.25s ease;
+    @include mix.fontStyleButton;
+
+    &.btn-dark {
+        background: var.$heading-color;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
