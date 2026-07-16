@@ -65,3 +65,15 @@ blockquote {
     @extend .desc-3;
     font-weight: var.$button-weight;
 }
+
+.text-highlight {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%);
+    }
+}

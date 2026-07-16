@@ -172,6 +172,10 @@ select {
   font-family: inherit;
 }
 
+.align-item-center {
+  align-items: center;
+}
+
 .col, .row[class*=row-cols-] > *,
 .row [class*=col-], .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
@@ -1159,6 +1163,17 @@ blockquote {
   font-weight: 600;
 }
 
+.text-highlight {
+  position: relative;
+}
+.text-highlight::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
 .btn {
   --btn-height: 64px;
   display: inline-flex;
@@ -1408,6 +1423,20 @@ blockquote {
 .hero__heading {
   width: 470px;
 }
+.hero__highlight {
+  position: relative;
+}
+.hero__highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  background: url("../../assets/images/hero-deco-1.svg");
+  width: 85%;
+  height: 44%;
+}
 .hero__desc {
   width: 470px;
   margin-top: 20px;
@@ -1442,6 +1471,41 @@ blockquote {
   height: 18px;
   border-radius: 50%;
   background: #201830;
+}
+
+.about {
+  margin-top: 160px;
+}
+.about__content {
+  width: 85%;
+}
+.about__highlight::after {
+  background: url("../../assets/images/about-deco-1.svg");
+  width: 236px;
+  height: 71%;
+  bottom: -10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about__desc {
+  margin-top: 18px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #665f73;
+}
+.about__btn {
+  margin-top: 38px;
+  column-gap: 8px;
+}
+.about__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

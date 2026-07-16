@@ -197,6 +197,22 @@
         width: 470px;
     }
 
+    &__highlight {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10%;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+            background: url("../../assets/images/hero-deco-1.svg");
+            width: 85%;
+            height: 44%;
+        }
+    }
+
     &__desc {
         width: 470px;
         margin-top: 20px;
