@@ -1,0 +1,237 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.hero {
+    padding: 90px 0 140px;
+    background: var.$secondary-color;
+
+    &__media-left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__media-bg {
+        aspect-ratio: 135 / 151;
+        border-radius: 8px;
+        background: #eeaa87;
+        overflow: hidden;
+        align-self: flex-start;
+    }
+
+    &__media-bg:last-of-type {
+        background: #70a05b;
+        margin-top: 28px;
+    }
+
+    &__media-img {
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.25s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    &__music {
+        position: absolute;
+        top: 302px;
+        display: flex;
+        align-items: center;
+        width: 198px;
+        padding: 18px 22px;
+        background: #fff;
+        border-radius: 9px;
+        box-shadow: 0 14px 46px 0 rgba(32, 24, 48, 0.07);
+    }
+
+    &__music-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        margin-right: 14px;
+        border: 1px solid var.$primary-color;
+        transition: opacity 0.25s ease;
+
+        &:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+    }
+
+    &__listener {
+        width: 100%;
+        margin-top: 54px;
+
+        &-title {
+            @include mix.fontStyleContent(sm);
+            color: var.$heading-color;
+            font-weight: 600;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            overflow: hidden;
+
+            &:not(:first-child) {
+                margin-left: -18px;
+            }
+
+            &:first-child {
+                background: #f1b672;
+            }
+
+            &:nth-child(2) {
+                background: #7ba261;
+            }
+
+            &:nth-child(3) {
+                background: #54c9ed;
+            }
+
+            &:last-child {
+                background: #201830;
+            }
+
+            span {
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 1.83;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-avt {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    &__media-right {
+        position: relative;
+    }
+
+    &__deco {
+        position: absolute;
+    }
+
+    &__deco:first-of-type {
+        left: 54px;
+        top: 46px;
+    }
+
+    &__deco:last-of-type {
+        top: 102px;
+        left: 158px;
+    }
+
+    &__bubble {
+        margin-top: 8px;
+        margin-left: 118px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background: var.$tertiary-color;
+
+        &-quantity {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        &-podcasts {
+            color: #ffefe7;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1;
+            margin-top: 4px;
+        }
+    }
+
+    &__brand {
+        margin-top: 12px;
+
+        &-logo {
+            transition: transform 0.25s ease;
+            &:not(:first-child) {
+                margin-left: 18px;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__heading {
+        width: 470px;
+    }
+
+    &__desc {
+        width: 470px;
+        margin-top: 20px;
+        @include mix.fontStyleContent;
+    }
+
+    &__cta {
+        margin-top: 40px;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 8px;
+        margin-left: 28px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__more {
+        font-size: var.$desc-size;
+        font-weight: var.$button-weight;
+        line-height: var.$desc-height;
+        color: var.$heading-color;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #201830;
+    }
+}

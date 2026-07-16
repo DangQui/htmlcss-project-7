@@ -49,3 +49,19 @@ blockquote {
     font-size: var.$desc-size-sm;
     line-height: var.$desc-height-sm;
 }
+
+// Button
+.button-1 {
+    @extend .desc-1;
+    font-weight: var.$button-weight;
+}
+
+.button-2 {
+    @extend .desc-2;
+    font-weight: var.$button-weight;
+}
+
+.button-3 {
+    @extend .desc-3;
+    font-weight: var.$button-weight;
+}
