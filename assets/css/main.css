@@ -1191,6 +1191,10 @@ blockquote {
   color: #665f73;
   color: #201830;
   font-weight: 600;
+  transition: text-decoration 0.25s ease;
+}
+.header__login:hover {
+  text-decoration: underline;
 }
 .header__sign-up {
   --btn-height: 48px;
@@ -1202,6 +1206,22 @@ blockquote {
   display: flex;
   align-items: center;
   column-gap: 48px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+.nav-item:nth-child(3) img {
+  padding-top: 4px;
+}
+.nav__link {
+  padding: 12px 0;
+  transition: color 0.25s, text-shadow 0.25s;
+}
+.nav__link:hover {
+  color: #201830;
+  text-shadow: 0.5px 0 0 currentColor;
 }
 
 /*# sourceMappingURL=main.css.map */

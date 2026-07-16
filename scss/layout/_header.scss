@@ -24,6 +24,11 @@
         @include mix.fontStyleContent(md);
         color: var.$heading-color;
         font-weight: var.$button-weight;
+        transition: text-decoration 0.25s ease;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__sign-up {
@@ -33,8 +38,34 @@
     }
 }
 
-.nav__list {
-    display: flex;
-    align-items: center;
-    column-gap: 48px;
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 48px;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+
+        &:nth-child(3) {
+            img {
+                padding-top: 4px;
+            }
+        }
+    }
+
+    &__link {
+        padding: 12px 0;
+        transition:
+            color 0.25s,
+            text-shadow 0.25s;
+
+        &:hover {
+            color: var.$heading-color;
+            text-shadow: 0.5px 0 0 currentColor;
+        }
+    }
 }
