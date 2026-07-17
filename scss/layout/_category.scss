@@ -4,6 +4,12 @@
 .category {
     margin-top: 206px;
 
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__content {
         @include mix.flexCenter;
         flex-direction: column;
@@ -14,9 +20,82 @@
             background: url("../../assets/images/about-deco-1.svg");
             width: 196px;
             height: 58%;
-            bottom: -13px;
+            bottom: -12px;
             background-repeat: no-repeat;
             background-size: cover;
         }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        width: 470px;
+        text-align: center;
+        @include mix.fontStyleContent(md);
+    }
+
+    &__list {
+        margin-top: 70px;
+    }
+
+    &-item {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover &__img {
+            transform: scale(1.1);
+        }
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.25s ease;
+        }
+
+        &__info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        &__heading {
+            &::after {
+                content: "";
+                display: inline-flex;
+                width: 14px;
+                height: 14px;
+
+                background: url("../../assets/icons/arrow-right.svg") center
+                    no-repeat;
+                background-size: 7px 7px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                margin-left: 6px;
+            }
+        }
+
+        &__heading,
+        &__desc {
+            color: #fff;
+        }
+    }
+
+    &__large {
+        height: 600px;
+    }
+
+    &__medium,
+    &__small {
+        height: 285px;
+    }
+
+    &__btn {
+        margin-top: 55px;
     }
 }
