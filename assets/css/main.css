@@ -1716,9 +1716,12 @@ blockquote {
 }
 .episode-item__heading {
   margin-top: 6px;
+  width: 270px;
+  transition: color 0.25s ease;
 }
 .episode-item__heading:hover {
   cursor: pointer;
+  color: #936cdd;
 }
 .episode__desc {
   margin-top: 18px;
@@ -1742,6 +1745,60 @@ blockquote {
 }
 .episode__bottom {
   margin-top: 55px;
+}
+
+.testimonial {
+  margin-top: 168px;
+}
+.testimonial__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.testimonial__img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+.testimonial__img:first-child {
+  width: 47%;
+}
+.testimonial__img:nth-child(2) {
+  position: relative;
+  top: 0;
+  left: -76px;
+  z-index: -1;
+  width: 65%;
+}
+.testimonial__dots {
+  position: absolute;
+  left: 13%;
+  bottom: 0;
+}
+.testimonial__heading {
+  width: 470px;
+  margin-top: 18px;
+  transition: color 0.25s ease;
+}
+.testimonial__heading:hover {
+  cursor: pointer;
+  color: #936cdd;
+}
+.testimonial__highlight::after {
+  background: url("../../assets/images/about-deco-1.svg");
+  width: 188px;
+  height: 57%;
+  bottom: -10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.testimonial__desc {
+  margin-top: 38px;
+  width: 470px;
+}
+.testimonial__name {
+  display: inline-block;
+  margin-top: 18px;
+  color: #aba6b5;
 }
 
 /*# sourceMappingURL=main.css.map */

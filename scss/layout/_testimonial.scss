@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.testimonial {
+    margin-top: 168px;
+
+    &__media {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    &__img:first-child {
+        width: 47%;
+    }
+
+    &__img:nth-child(2) {
+        position: relative;
+        top: 0;
+        left: -76px;
+        z-index: -1;
+        width: 65%;
+    }
+
+    &__dots {
+        position: absolute;
+        left: 13%;
+        bottom: 0;
+    }
+
+    &__heading {
+        width: 470px;
+        margin-top: 18px;
+        transition: color 0.25s ease;
+
+        &:hover {
+            cursor: pointer;
+            color: var.$primary-color;
+        }
+    }
+
+    &__highlight {
+        &::after {
+            background: url("../../assets/images/about-deco-1.svg");
+            width: 188px;
+            height: 57%;
+            bottom: -10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__desc {
+        margin-top: 38px;
+        width: 470px;
+    }
+
+    &__name {
+        display: inline-block;
+        margin-top: 18px;
+        color: #aba6b5;
+    }
+}
