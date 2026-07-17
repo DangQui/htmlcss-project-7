@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.episode {
+    margin-top: 160px;
+    padding: 100px 0;
+    background: var.$secondary-color;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        width: 390px;
+    }
+
+    &__highlight {
+        z-index: 1;
+        &::after {
+            background: url("../../assets/images/about-deco-1.svg");
+            width: 144px;
+            height: 43%;
+            bottom: -10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

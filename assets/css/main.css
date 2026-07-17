@@ -1651,4 +1651,29 @@ blockquote {
   margin-top: 55px;
 }
 
+.episode {
+  margin-top: 160px;
+  padding: 100px 0;
+  background: #fff8f3;
+}
+.episode__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.episode__heading {
+  width: 390px;
+}
+.episode__highlight {
+  z-index: 1;
+}
+.episode__highlight::after {
+  background: url("../../assets/images/about-deco-1.svg");
+  width: 144px;
+  height: 43%;
+  bottom: -10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*# sourceMappingURL=main.css.map */
