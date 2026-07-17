@@ -1552,4 +1552,22 @@ blockquote {
   top: 176px;
 }
 
+.category {
+  margin-top: 206px;
+}
+.category__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.category__highlight::after {
+  background: url("../../assets/images/about-deco-1.svg");
+  width: 196px;
+  height: 58%;
+  bottom: -13px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*# sourceMappingURL=main.css.map */
