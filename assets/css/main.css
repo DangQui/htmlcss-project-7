@@ -1474,10 +1474,10 @@ blockquote {
 }
 
 .about {
-  margin-top: 160px;
+  margin-top: 205px;
 }
 .about__content {
-  width: 85%;
+  width: 90%;
 }
 .about__highlight::after {
   background: url("../../assets/images/about-deco-1.svg");
@@ -1506,6 +1506,50 @@ blockquote {
   height: 18px;
   border-radius: 50%;
   background: #fff;
+}
+.about__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about__circle-blur {
+  width: 287px;
+  height: 287px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: #ff9051;
+  filter: blur(129px);
+}
+.about__app-icon {
+  position: absolute;
+  transition: transform 0.25s ease;
+}
+.about__app-icon:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+.about__app-icon:first-child {
+  left: 0;
+}
+.about__app-icon:nth-child(3) {
+  left: 185px;
+  top: -45px;
+  width: 148px;
+}
+.about__app-icon:nth-child(4) {
+  width: 126px;
+  left: 170px;
+  bottom: -46px;
+}
+.about__app-icon:nth-child(5) {
+  right: 0;
+  top: 14px;
+}
+.about__app-icon:last-child {
+  width: 138px;
+  right: 48px;
+  top: 176px;
 }
 
 /*# sourceMappingURL=main.css.map */

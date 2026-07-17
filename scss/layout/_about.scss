@@ -2,10 +2,10 @@
 @use "../abstracts/mixins" as mix;
 
 .about {
-    margin-top: 160px;
+    margin-top: 205px;
 
     &__content {
-        width: 85%;
+        width: 90%;
     }
 
     &__highlight {
@@ -35,5 +35,56 @@
         height: 18px;
         border-radius: 50%;
         background: #fff;
+    }
+
+    &__media {
+        position: relative;
+        @include mix.flexCenter;
+    }
+
+    &__circle-blur {
+        width: 287px;
+        height: 287px;
+        border-radius: 50%;
+        opacity: 0.4;
+        background: #ff9051;
+        filter: blur(129px);
+    }
+
+    &__app-icon {
+        position: absolute;
+        transition: transform 0.25s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            cursor: pointer;
+        }
+    }
+
+    &__app-icon:first-child {
+        left: 0;
+    }
+
+    &__app-icon:nth-child(3) {
+        left: 185px;
+        top: -45px;
+        width: 148px;
+    }
+
+    &__app-icon:nth-child(4) {
+        width: 126px;
+        left: 170px;
+        bottom: -46px;
+    }
+
+    &__app-icon:nth-child(5) {
+        right: 0;
+        top: 14px;
+    }
+
+    &__app-icon:last-child {
+        width: 138px;
+        right: 48px;
+        top: 176px;
     }
 }
