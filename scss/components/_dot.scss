@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.dot {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    &-item {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #d8d5de;
+        transition:
+            transform 0.25s ease,
+            background 0.25s ease;
+
+        transform-origin: center;
+
+        &:hover {
+            transform: scale(1.5);
+            background: var.$primary-color;
+            cursor: pointer;
+        }
+
+        &.active {
+            transform: scale(1.5);
+            background: var.$primary-color;
+        }
+    }
+}
