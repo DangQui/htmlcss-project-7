@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/typography" as typo;
+
+input[type="email"],
+input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 18px 28px;
+    border-radius: 8px;
+    background: #2b213f;
+    border: 1px solid transparent;
+    outline: none;
+    color: #aba6b5;
+    @extend .desc-2;
+    transition: border 0.25s ease;
+
+    &:hover,
+    &:focus {
+        border: 1px solid #aba6b5;
+    }
+}

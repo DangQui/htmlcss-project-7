@@ -5,8 +5,10 @@
     position: sticky;
     top: -22px;
     background: var.$secondary-color;
+    opacity: 0.96;
     padding: 42px 0 20px;
     z-index: 990;
+    backdrop-filter: blur(10px);
 
     &__inner {
         display: flex;

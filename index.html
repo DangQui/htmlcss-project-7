@@ -701,7 +701,9 @@
                     <div class="testimonial__inner">
                         <div class="row row-cols-2 align-item-center">
                             <div class="col-lg-6">
-                                <div class="testimonial__media">
+                                <div
+                                    class="testimonial__media"
+                                    data-aos="flip-left">
                                     <img
                                         src="./assets/images/testimonial-1.png"
                                         alt=""
@@ -718,7 +720,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-5 offset-lg-1">
-                                <section class="testimonial__info">
+                                <section
+                                    class="testimonial__info"
+                                    data-aos="flip-right">
                                     <img
                                         src="./assets/icons/quotation-marks.svg"
                                         alt="Quote"
@@ -746,6 +750,70 @@
                                 </section>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscribe -->
+            <section class="subscribe">
+                <div class="container">
+                    <div class="subscribe__inner">
+                        <img
+                            src="./assets/icons/star-1.svg"
+                            alt=""
+                            class="subscribe__deco" />
+                        <img
+                            src="./assets/icons/star-2.svg"
+                            alt=""
+                            class="subscribe__deco" />
+                        <img
+                            src="./assets/icons/star-3.svg"
+                            alt=""
+                            class="subscribe__deco" />
+
+                        <div class="row row-cols-lg-2 align-item-center">
+                            <div class="col">
+                                <h2 class="subscribe__heading">
+                                    Subscribe and get
+                                    <span
+                                        class="text-highlight subscribe__highlight">
+                                        update
+                                    </span>
+                                    regularly
+                                </h2>
+                            </div>
+                            <div class="col">
+                                <p class="subscribe__desc desc-2">
+                                    Rebuilt for simplicity and speed, so you can
+                                    spend more time discovering and listening to
+                                    great podcasts. Get all the updates of
+                                    latest podcasts.
+                                </p>
+                            </div>
+                        </div>
+                        <form class="subscribe__form">
+                            <div class="row row-cols-lg-3">
+                                <div class="col col-lg-5">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Your name" />
+                                </div>
+                                <div class="col col-lg-5">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Your email address" />
+                                </div>
+                                <div class="col col-lg-2">
+                                    <button class="btn subscribe__submit">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

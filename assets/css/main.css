@@ -1122,7 +1122,7 @@ h1 {
 
 h2 {
   font-size: 4.2rem;
-  line-height: 1.23;
+  line-height: 1.24;
 }
 
 h3 {
@@ -1141,7 +1141,8 @@ blockquote {
   line-height: 1.67;
 }
 
-.desc-2, .button-2 {
+.desc-2, input[type=email],
+input[type=text], .button-2 {
   font-size: 1.6rem;
   line-height: 1.75;
 }
@@ -1238,12 +1239,32 @@ blockquote {
   background: #936cdd;
 }
 
+input[type=email],
+input[type=text] {
+  display: block;
+  width: 100%;
+  padding: 18px 28px;
+  border-radius: 8px;
+  background: #2b213f;
+  border: 1px solid transparent;
+  outline: none;
+  color: #aba6b5;
+  transition: border 0.25s ease;
+}
+input[type=email]:hover, input[type=email]:focus,
+input[type=text]:hover,
+input[type=text]:focus {
+  border: 1px solid #aba6b5;
+}
+
 .header {
   position: sticky;
   top: -22px;
   background: #fff8f3;
+  opacity: 0.96;
   padding: 42px 0 20px;
   z-index: 990;
+  backdrop-filter: blur(10px);
 }
 .header__inner {
   display: flex;
@@ -1799,6 +1820,52 @@ blockquote {
   display: inline-block;
   margin-top: 18px;
   color: #aba6b5;
+}
+
+.subscribe {
+  margin-top: 160px;
+}
+.subscribe__inner {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  padding: 100px;
+  background-color: #201830;
+  z-index: 0;
+}
+.subscribe__deco {
+  position: absolute;
+}
+.subscribe__deco:first-child {
+  top: 26px;
+  left: 45%;
+}
+.subscribe__deco:nth-child(2) {
+  top: 180px;
+  right: 2%;
+}
+.subscribe__deco:nth-child(3) {
+  top: 370px;
+  left: 3%;
+}
+.subscribe__heading {
+  width: 470px;
+  color: #fff;
+}
+.subscribe__highlight::after {
+  background: url("../../assets/images/about-deco-1.svg");
+  width: 160px;
+  height: 46%;
+  bottom: -4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.subscribe__desc {
+  width: 470px;
+  color: #aba6b5;
+}
+.subscribe__form {
+  margin-top: 70px;
 }
 
 /*# sourceMappingURL=main.css.map */
