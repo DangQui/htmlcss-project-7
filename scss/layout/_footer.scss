@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/typography" as typo;
+
+.footer {
+    padding: 104px 0 38px;
+    background: var.$secondary-color;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .copyright {
+        margin-top: 14px;
+        color: var.$desc-color;
+        width: 270px;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin-top: 18px;
+    }
+
+    &__social {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var.$heading-color;
+        transition: background 0.25s ease;
+
+        &:hover {
+            background: var.$primary-color;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        column-gap: 90px;
+    }
+
+    &__title {
+        @extend h3;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        margin-top: 24px;
+    }
+
+    &__link {
+        transition:
+            color 0.25s ease,
+            text-shadow 0.25s ease;
+
+        &:hover {
+            color: var.$heading-color;
+            text-shadow: 0.5px 0 0 currentColor;
+            text-decoration: underline;
+        }
+    }
+
+    &__brand {
+        margin-top: 24px;
+
+        &-item {
+            display: inline-block;
+            width: 36px;
+
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        &-img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
