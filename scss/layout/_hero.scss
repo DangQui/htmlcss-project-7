@@ -214,7 +214,7 @@
     }
 
     &__desc {
-        width: 470px;
+        max-width: 470px;
         margin-top: 20px;
         @include mix.fontStyleContent;
     }

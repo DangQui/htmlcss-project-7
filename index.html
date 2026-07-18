@@ -76,6 +76,14 @@
             href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
             rel="stylesheet" />
 
+        <!-- Font Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+            integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -85,8 +93,8 @@
             rel="stylesheet" />
     </head>
     <body style="height: 5000px">
-        <!-- Header -->
-        <header class="header">
+        <!-- Header PC -->
+        <header class="header hide-mobile">
             <div class="container">
                 <div class="header__inner">
                     <a href="#!" class="header__logo">
@@ -125,6 +133,83 @@
                         <button class="btn btn-dark header__sign-up">
                             Sign up
                         </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Header Mobile -->
+        <header class="header-mobile">
+            <div class="container">
+                <div class="header-mobile__inner">
+                    <a href="#!" class="header-mobile__logo">
+                        <img
+                            src="./assets/images/logo.svg"
+                            alt="Babble"
+                            class="header-mobile__img" />
+                    </a>
+                    <div class="header-mobile__feature">
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="header-mobile__input"
+                            hidden />
+                        <label
+                            for="header-mobile__input"
+                            class="header-mobile__menu">
+                            <img
+                                src="./assets/icons/menu.svg"
+                                alt="Menu"
+                                class="header-mobile__menu-icon" />
+                        </label>
+
+                        <div class="drawer">
+                            <div class="drawer__wrapper">
+                                <div class="drawer__top">
+                                    <img
+                                        src="./assets/images/logo.svg"
+                                        alt="Menu" />
+                                    <label
+                                        for="header-mobile__input"
+                                        class="drawer__chevron">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </label>
+                                </div>
+                                <ul class="drawer__list">
+                                    <li class="drawer__item">
+                                        <a href="#!" class="drawer__link">
+                                            Episodes
+                                        </a>
+                                    </li>
+                                    <li class="drawer__item">
+                                        <a href="#!" class="drawer__link">
+                                            Trending
+                                        </a>
+                                    </li>
+                                    <li class="drawer__item">
+                                        <a href="#!" class="drawer__link">
+                                            Category
+                                        </a>
+                                    </li>
+                                    <li class="drawer__item">
+                                        <a href="#!" class="drawer__link">
+                                            Blog
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="drawer__bottom">
+                                    <a href="#!" class="header__login">
+                                        Log in
+                                    </a>
+                                    <button class="btn btn-dark">
+                                        Sign up
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <label
+                            for="header-mobile__input"
+                            class="overlay"></label>
                     </div>
                 </div>
             </div>
@@ -988,7 +1073,7 @@
             AOS.init({
                 offset: 120,
                 delay: 0,
-                duration: 600,
+                duration: 2000,
                 easing: "ease",
                 once: false,
                 mirror: false,

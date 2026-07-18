@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+// PC
+@media screen and (min-width: 992px) {
+    .hide-pc {
+        display: none;
+    }
+}
+
+// Tablet & Mobile
+@media screen and (max-width: 991.98px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .header-mobile {
+        position: sticky;
+        top: 0px;
+        z-index: 889;
+        background: var.$secondary-color;
+        padding: 20px 0;
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .drawer {
+        position: fixed;
+        inset: 0 30% 0 0;
+        z-index: 999;
+        transform: translateX(-100%);
+        padding: 20px 40px;
+        background: #fff;
+        transition: transform 0.4s ease;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__list {
+            margin-top: 40px;
+        }
+
+        &__item {
+            padding: 20px 0;
+        }
+
+        &__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px;
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 998;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.4s ease,
+            visibility 0.4s ease;
+    }
+
+    #header-mobile__input:checked ~ .drawer {
+        transform: translateX(0);
+    }
+
+    #header-mobile__input:checked ~ .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Mobile
+@media screen and (max-width: 767.98px) {
+}
