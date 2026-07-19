@@ -50,7 +50,7 @@
 
     &-item__heading {
         margin-top: 6px;
-        width: 270px;
+        max-width: 270px;
         transition: color 0.25s ease;
 
         &:hover {

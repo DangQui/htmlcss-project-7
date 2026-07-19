@@ -14,6 +14,18 @@
         display: none;
     }
 
+    .order-1 {
+        order: 1;
+    }
+
+    .order-2 {
+        order: 2;
+    }
+
+    .order-3 {
+        order: 3;
+    }
+
     .header-mobile {
         position: sticky;
         top: 0px;
@@ -35,7 +47,7 @@
         transform: translateX(-100%);
         padding: 20px 40px;
         background: #fff;
-        transition: transform 0.4s ease;
+        transition: transform 0.6s ease;
 
         &__wrapper {
             display: flex;
@@ -83,6 +95,75 @@
     #header-mobile__input:checked ~ .overlay {
         opacity: 1;
         visibility: visible;
+    }
+
+    // Hero
+    .hero {
+        padding: 30px 0 32px;
+
+        &__music {
+            top: 336px;
+        }
+
+        &__content {
+            margin-top: 40px;
+        }
+
+        &__heading {
+            max-width: 100%;
+        }
+
+        &__desc {
+            max-width: 100%;
+            margin-top: 18px;
+        }
+
+        &__cta {
+            margin-top: 32px;
+        }
+
+        &__link {
+            margin-left: 60px;
+        }
+
+        &__author {
+            bottom: 10px;
+        }
+    }
+
+    // About
+    .about {
+        margin-top: 160px;
+
+        &__content {
+            width: 100%px;
+            margin-top: 90px;
+        }
+
+        &__btn {
+            margin-top: 32px;
+        }
+    }
+
+    // Category
+    .category {
+        margin-top: 100px;
+
+        &__list {
+            margin-top: 42px;
+        }
+
+        &-item:not(.category__large) {
+            margin-top: 16px;
+        }
+
+        &__mb-height {
+            height: 506px;
+        }
+
+        &__btn {
+            margin-top: 42px;
+        }
     }
 }
 

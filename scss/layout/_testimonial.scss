@@ -34,7 +34,7 @@
     }
 
     &__heading {
-        width: 470px;
+        max-width: 470px;
         margin-top: 18px;
         transition: color 0.25s ease;
 
@@ -57,7 +57,7 @@
 
     &__desc {
         margin-top: 38px;
-        width: 470px;
+        max-width: 470px;
     }
 
     &__name {
