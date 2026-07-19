@@ -66,6 +66,10 @@
         }
     }
 
+    &__music-play {
+        transform: translateX(10%);
+    }
+
     &__listener {
         width: 100%;
         margin-top: 54px;

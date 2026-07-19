@@ -579,10 +579,13 @@
                                 </span>
                                 episodes
                             </h2>
-                            <button class="btn btn-dark">All episodes</button>
+                            <button class="btn btn-dark hide-mobile">
+                                All episodes
+                            </button>
                         </section>
                         <div class="episode__list">
-                            <div class="row row-cols-2 gy-lg-3">
+                            <div
+                                class="row row-cols-lg-2 gy-lg-3 row-cols-1 no-wrap">
                                 <!-- Item 1 -->
                                 <div class="col">
                                     <article class="episode__card">
@@ -784,6 +787,9 @@
                                 <span class="dot-item"></span>
                             </div>
                         </div>
+                        <button class="btn btn-dark btn-on-mobile hide-pc">
+                            All episodes
+                        </button>
                     </div>
                 </div>
             </section>
@@ -792,8 +798,9 @@
             <section class="testimonial">
                 <div class="container">
                     <div class="testimonial__inner">
-                        <div class="row row-cols-2 align-item-center">
-                            <div class="col-lg-6">
+                        <div
+                            class="row row-cols-lg-2 row-cols-1 align-item-center">
+                            <div class="col-lg-6 order-2">
                                 <div
                                     class="testimonial__media"
                                     data-aos="flip-left">
@@ -812,7 +819,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 offset-lg-1">
+                            <div class="col-lg-5 offset-lg-1 order-1">
                                 <section
                                     class="testimonial__info"
                                     data-aos="flip-right">
@@ -864,7 +871,8 @@
                             alt=""
                             class="subscribe__deco" />
 
-                        <div class="row row-cols-lg-2 align-item-center">
+                        <div
+                            class="row row-cols-lg-2 row-cols-1 align-item-center">
                             <div class="col">
                                 <h2 class="subscribe__heading">
                                     Subscribe and get
@@ -885,7 +893,7 @@
                             </div>
                         </div>
                         <form class="subscribe__form">
-                            <div class="row row-cols-lg-3">
+                            <div class="row row-cols-lg-3 row-cols-1 gy-3">
                                 <div class="col col-lg-5">
                                     <input
                                         type="text"
