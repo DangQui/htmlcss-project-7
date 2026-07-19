@@ -180,6 +180,10 @@ img {
   align-items: center;
 }
 
+.justify-conten-center {
+  justify-content: center;
+}
+
 .col, .row[class*=row-cols-] > *,
 .row [class*=col-], .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
