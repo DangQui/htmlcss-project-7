@@ -1482,6 +1482,7 @@ input[type=text]:focus {
   margin-top: 4px;
 }
 .hero__brand {
+  display: flex;
   margin-top: 12px;
 }
 .hero__brand-logo {
@@ -2245,6 +2246,9 @@ input[type=text]:focus {
   }
   .hero__brand-logo:not(:first-child) {
     margin-left: 8px;
+  }
+  .hero__brand-logo {
+    width: 17px;
   }
   .hero__deco:first-of-type {
     left: 30px;

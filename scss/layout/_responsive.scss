@@ -350,6 +350,10 @@
             &-logo:not(:first-child) {
                 margin-left: 8px;
             }
+
+            &-logo {
+                width: 17px;
+            }
         }
 
         &__deco:first-of-type {
